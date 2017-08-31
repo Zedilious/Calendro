@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Only click ok if you are happy with your choices."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        android:textStyle="normal|bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp" />
+
+    <Button
+        android:text="OK?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Sub"
+        android:layout_above="@+id/textView10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/NameA"
+        android:backgroundTint="@color/common_google_signin_btn_text_light_disabled"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/ID"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Who should we know you as?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ID"
+        android:layout_marginTop="151dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

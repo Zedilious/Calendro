@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_main">CalDisplay</string>
+    <string name="title_activity_image_selector">ImageSelector</string>
+    <string name="title_activity_start">Start</string>
+    <string name="title_activity_demodisplay">DemodisplayActivity</string>
+</resources>

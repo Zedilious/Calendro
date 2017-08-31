@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/common_full_open_on_phone"
+        android:layout_marginTop="96dp"
+        android:id="@+id/game2"
+        android:layout_below="@+id/game1"
+        android:layout_alignLeft="@+id/game1"
+        android:layout_alignStart="@+id/game1" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/common_full_open_on_phone"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="45dp"
+        android:id="@+id/game1"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Games"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:id="@+id/textView7"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp" />
+
+    <Button
+        android:text="Name that Person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ntp"
+        android:onClick="onClick"
+        android:layout_above="@+id/game2"
+        android:layout_alignRight="@+id/textView7"
+        android:layout_alignEnd="@+id/textView7" />
+
+    <Button
+        android:text="Matching Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mg"
+        android:onClick="onClick"
+        android:layout_alignBottom="@+id/game2"
+        android:layout_alignLeft="@+id/ntp"
+        android:layout_alignStart="@+id/ntp" />
+</RelativeLayout>

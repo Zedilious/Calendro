@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/egg"
+        android:id="@+id/personI"
+        android:layout_marginTop="107dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Score: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/scoreI"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/inputI"
+        android:layout_toStartOf="@+id/inputI" />
+
+    <Button
+        android:text="Play Again?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="13dp"
+        android:id="@+id/pA"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:text="Congratulations You Won!!!!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:id="@+id/congrats"
+        android:layout_below="@+id/pA"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Who is this?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wit"
+        android:textSize="18sp"
+        android:layout_below="@+id/scoreI"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/inputI"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/personI"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmI"
+        android:onClick="onClick"
+        android:layout_alignBaseline="@+id/pass"
+        android:layout_alignBottom="@+id/pass"
+        android:layout_alignRight="@+id/pA"
+        android:layout_alignEnd="@+id/pA"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp" />
+
+    <Button
+        android:text="Pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pass"
+        android:onClick="onClick"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/inputI"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp" />
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?><!-- suppress ALL -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.adam.myapplication">
+    <!-- Backup- Save images on bitmap
+         Icon- Custom Created image from drawable folder
+         Label- Name of the application
+         Theme- No actionbar displayed at any time-->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/loadingfont"
+        android:label="Calendro"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".Activities.CanvasActivity"
+            android:theme="@style/AppTheme.calpopup" />
+        <activity
+            android:name=".Games.MatchingCards"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.GameOfTheWeek" />
+        <!-- Implement this MQTT library supplied by PAHO -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" >
+        </service>
+        <!-- Starting activity when the application is loaded up
+             Theme- Splash display will appear upon opening the application-->
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- Activity that controls the calendar actions and input handlers-->
+        <activity
+            android:name=".Activities.CalendarActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- Activity that controls the game "Match The Face" functions-->
+        <activity
+            android:name=".Games.MatchTheFace"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <!-- Activity that displays the available games on the android device-->
+        <activity
+            android:name=".Activities.GamesList"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <!-- Activity that allows user to access the phones local image gallery-->
+        <activity
+            android:name=".Activities.ImageSelector"
+            android:label="@string/title_activity_image_selector"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <!-- Activity that gathers the name of the User-->
+        <activity
+            android:name=".Activities.WhoAreYou"
+            android:label="@string/title_activity_start"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.StartScreenActivity"
+            android:label="@string/title_activity_demodisplay"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+    </application>
+    <!-- These permissions allow the MQTT connection to fully establish -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- These permissions allow the canvas to be saved to a bitmap -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- These permissions allow the user to add events to there internal calendar located on the phone -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+</manifest>

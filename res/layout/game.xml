@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:theme="@style/AppTheme.NoActionBar">
+
+
+    <Button
+        android:text="Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gmStart"
+        android:onClick="onClick"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/gmName"
+        android:layout_toStartOf="@+id/gmName"
+        android:layout_marginBottom="23dp" />
+
+    <Button
+        android:text="Play Later"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gmSkip"
+        android:onClick="onClick"
+        android:layout_below="@+id/gmName"
+        android:layout_toRightOf="@+id/gmName"
+        android:layout_toEndOf="@+id/gmName" />
+
+    <TextView
+        android:text="It's time for this week's game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/wkGM"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Family Matching Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
+        android:id="@+id/gmName"
+        android:layout_above="@+id/gmStart"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/editbox_dropdown_light_frame"
+        android:id="@+id/gmPhoto"
+        android:scaleX="10"
+        android:scaleY="10"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:padding="175dp"
+        android:layout_below="@+id/wkGM"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
